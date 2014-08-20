@@ -22,7 +22,15 @@
         :   renderFile(filename, content);
     }
 
-    itpl.version = '1.0.0';
+    itpl.VERSION = '1.0.1';
+
+    var previousItpl = window.itpl;
+
+    // 避免命名冲突
+    itpl.noConflict = function() {
+        window.itpl = previousItpl;
+        return this;
+    };
 
     var defaults = itpl.defaults = {
         openTag: '<%',    // 逻辑语法开始标签
