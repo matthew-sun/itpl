@@ -259,14 +259,13 @@
         return str;
 
     }
+    this.itpl = itpl;
 
     // RequireJS && SeaJS
     if (typeof define === 'function') {
         define(function() {
             return itpl;
         });
-    }else {
-        this.itpl = itpl;
     }
 
 })(window)
