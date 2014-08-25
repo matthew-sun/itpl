@@ -23,7 +23,7 @@
         :   renderFile(filename, content);
     }
 
-    itpl.VERSION = '1.0.1';
+    itpl.VERSION = '1.0.2';
 
     var previousItpl = window.itpl;
 
