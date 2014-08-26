@@ -1,4 +1,4 @@
-爱模板 itpl 1.0.1 版
+爱模板 itpl 1.0.3 版
 ==========================
 
 ### ==========================
@@ -32,6 +32,9 @@
                 <%}%>';
     var str2 = '<div><%=name%></div>\
                 <div><%=age%></div>';
+    var str3 = '<div>{{name}}</div>\
+                <div>{{age}}</div>\
+                <div>{{agse}}</div>';
             
     var data = {
         name : 'matthewsun',
@@ -47,7 +50,7 @@
     var result3 = itpl('tpl-3',data);
 
     //简单模板引擎
-    var result4 = itpl.render(str2,data);
+    var result4 = itpl.render(str3,data);
 
     window.onload = function() {
         toHtml(result1,'test1');
